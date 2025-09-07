@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Mask of Materialism — Microstory Post</title>
+  <meta name="description" content="A microstory inspired by Bernardo Kastrup’s critique of materialism." />
+  <style>
+    :root{
+      --bg:#0e0f12;
+      --ink:#e8e9ee;
+      --muted:#a6a8b3;
+      --accent:#c0b084;
+      --maxw:1100px;
+      --gap:1.25rem;
+      --radius:18px;
+      --shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:auto;
+      padding:clamp(16px,3vw,32px);
+    }
+    .post{
+      display:grid;
+      grid-template-columns: 1fr minmax(280px, 38%);
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "top top"
+        "image right"
+        "bottom bottom";
+      gap:var(--gap);
+    }
+    /* Top band (above image) */
+    .top{
+      grid-area:top;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:clamp(14px,2vw,22px);
+      box-shadow:var(--shadow);
+    }
+    .top h1{
+      margin:0 0 .25rem 0;
+      line-height:1.15;
+      font-size:clamp(1.4rem, 2.6vw, 2.2rem);
+      letter-spacing:.2px;
+    }
+    .top p{
+      margin:.25rem 0 0 0;
+      color:var(--muted);
+      font-size:clamp(.9rem, 1.4vw, 1rem);
+    }
+
+    /* Image panel (center-left) */
+    .image{
+      grid-area:image;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      background:#1a1b20;
+      box-shadow:var(--shadow);
+    }
+    .image figure{margin:0}
+    .image img{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:1/1; /* helps layout while loading */
+      object-fit:cover;
+    }
+    .caption{
+      padding:.6rem .9rem .8rem;
+      color:var(--muted);
+      font-size:.85rem;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    /* Right sidebar text (beside image) */
+    .right{
+      grid-area:right;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:clamp(14px,2vw,22px);
+      box-shadow:var(--shadow);
+    }
+    .right h2{
+      margin:.1rem 0 .6rem;
+      font-size:clamp(1.05rem, 1.8vw, 1.25rem);
+    }
+    .right p{margin:.4rem 0}
+    .right .callout{
+      margin:.8rem 0 0;
+      padding:.75rem .9rem;
+      border-left:3px solid var(--accent);
+      background:rgba(255,255,255,.03);
+      border-radius:10px;
+      color:var(--ink);
+    }
+
+    /* Bottom band (full width below image) */
+    .bottom{
+      grid-area:bottom;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:clamp(14px,2vw,24px);
+      box-shadow:var(--shadow);
+    }
+    .bottom h3{
+      margin:.2rem 0 .7rem;
+      font-size:clamp(1.05rem, 1.8vw, 1.25rem);
+    }
+    .bottom p{margin:.55rem 0}
+    .quote{
+      margin:1rem 0;
+      padding:1rem 1.1rem;
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius:12px;
+      font-style:italic;
+      color:var(--accent);
+      background:rgba(255,255,255,.02);
+    }
+
+    /* Responsive stack */
+    @media (max-width: 860px){
+      .post{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "top"
+          "image"
+          "right"
+          "bottom";
+      }
+    }
+
+    /* Nice links */
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article class="post" role="article">
+      <!-- TOP (above image) -->
+      <section class="top">
+        <h1>The Mask of Materialism</h1>
+        <p>A 1-minute microstory inspired by Bernardo Kastrup’s argument that historical materialism was a strategy, not a final truth.</p>
+      </section>
+
+      <!-- IMAGE (center-left) -->
+      <section class="image" aria-label="Illustration">
+        <figure>
+          <img src="IMAGE_URL_HERE" alt="A cloaked figure holding a mask, a sword, and a skull—symbolic icons of materialism as a protective mask and political weapon." loading="lazy" />
+          <figcaption class="caption">
+            Illustration: <em>The Mask of Materialism</em>. Replace this with your credit line or link.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- RIGHT (beside image) -->
+      <aside class="right">
+        <h2>Story at a Glance</h2>
+        <p><strong>Mask (Protection):</strong> Early scientists whisper, “If mind = brain, the Church can’t burn us.” The mask of materialism hides them.</p>
+        <p><strong>Sword (Weapon):</strong> Diderot winks: “It doesn’t explain consciousness, but it cuts clergy power.” The bourgeois age sharpens the blade.</p>
+        <p><strong>Relief (Death):</strong> If brain makes mind, then death is nothing to feel—existential fear softens.</p>
+        <div class="callout">
+          <strong>Today:</strong> The mask cracks, the sword dulls. Time to face reality fresh—beyond a convenient fiction.
+        </div>
+      </aside>
+
+      <!-- BOTTOM (full width below image) -->
+      <section class="bottom">
+        <h3>Full Microstory</h3>
+        <p>
+          Imagine a group of early scientists in dark cloaks, huddled in secret. They whisper:
+          <em>“If we say the mind is just the brain, the Church can’t burn us.”</em>
+          That’s the <strong>mask of materialism</strong>—not truth, but protection.
+        </p>
+        <p>
+          Later, <strong>Diderot</strong> winks:
+          <em>“It doesn’t explain consciousness… but it’s a sharp sword against priests. Let’s use it.”</em>
+          The sword cuts the clergy’s power and hands control to new elites. Science flourishes, experiments feel
+          “objective,” and people sigh in relief:
+          <em>“If brain = mind, then death = nothing. No punishment afterlife.”</em>
+        </p>
+        <p class="quote">
+          Centuries pass. The mask slips. The sword grows dull. Materialism feels like an old costume—useful once,
+          no longer fitting. Time to drop the weapon and look again.
+        </p>
+        <p>
+          <strong>Memory hook:</strong> <em>Mask</em> (protection), <em>Sword</em> (weapon), <em>Relief</em> (fear of death),
+          <em>Old Costume</em> (outdated fiction).
+        </p>
+        <p>
+          Source context: Bernardo Kastrup, “Materialism as a political weapon” via IAI. Consider exploring idealist
+          alternatives that treat consciousness as primary.
+        </p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
